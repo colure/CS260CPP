@@ -111,7 +111,7 @@ vector<Bid> loadBids(string csvPath) {
     return bids;
 }
 
-// FIXME (2a): Implement the quick sort logic over bid.title
+// Implementing the quick sort logic over bid.title
 
 /**
  * Partition the vector of bids into two parts, low and high
@@ -179,7 +179,7 @@ void quickSort(vector<Bid>& bids, int begin, int end) {
 	quickSort(bids, mid +1, end);
 }
 
-// FIXME (1a): Implement the selection sort logic over bid.title
+// Implementing the selection sort logic over bid.title
 
 /**
  * Perform a selection sort on bid title
@@ -281,7 +281,7 @@ int main(int argc, char* argv[]) {
 
             break;
 
-        // FIXME (1b): Invoke the selection sort and report timing results
+        // Invoking the selection sort and report timing results
         case 3:
            // Initialize a timer variable before loading bids
            ticks = clock();
@@ -297,7 +297,7 @@ int main(int argc, char* argv[]) {
            cout << "time: " << ticks * 1.0 / CLOCKS_PER_SEC << " seconds" << endl;
 
            break;
-        // FIXME (2b): Invoke the quick sort and report timing results
+        // Invoking the quick sort and report timing results
         case 4:
            // Initialize a timer variable before loading bids
            ticks = clock();
