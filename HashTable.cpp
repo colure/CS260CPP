@@ -47,7 +47,7 @@ struct Bid {
 class HashTable {
 
 private:
-    // FIXME (1): Define structures to hold bids
+    // Defining structures to hold bids.
 	struct Node {
 		Bid bid;
 		unsigned key;
@@ -92,7 +92,7 @@ public:
  * Default constructor
  */
 HashTable::HashTable() {
-    // FIXME (2): Initialize the structures used to hold bids
+    // Initializing the structures used to hold bids
 	nodes.resize(tableSize);
 }
 
@@ -105,7 +105,7 @@ HashTable::HashTable(unsigned size) {
  * Destructor
  */
 HashTable::~HashTable() {
-    // FIXME (3): Implement logic to free storage when class is destroyed
+    // Implementing logic to free storage when class is destroyed
 	nodes.erase(nodes.begin());
 }
 
@@ -119,7 +119,7 @@ HashTable::~HashTable() {
  * @return The calculated hash
  */
 unsigned int HashTable::hash(int key) {
-    // FIXME (4): Implement logic to calculate a hash value
+    // Implementing logic to calculate a hash value.
 	return key % tableSize;
 }
 
@@ -129,7 +129,7 @@ unsigned int HashTable::hash(int key) {
  * @param bid The bid to insert
  */
 void HashTable::Insert(Bid bid) {
-    // FIXME (5): Implement logic to insert a bid
+    // Implementing logic to insert a bid
 	unsigned key = hash(atoi(bid.bidId.c_str()));
 
 	//try and retrieve node using the key
@@ -159,7 +159,7 @@ void HashTable::Insert(Bid bid) {
  * Print all bids
  */
 void HashTable::PrintAll() {
-    // FIXME (6): Implement logic to print all bids
+    // Implementing logic to print all bids
 	Node* current = head;
 
 	//loop over each node
@@ -178,7 +178,7 @@ void HashTable::PrintAll() {
  * @param bidId The bid id to search for
  */
 void HashTable::Remove(string bidId) {
-    // FIXME (7): Implement logic to remove a bid
+    // Implementing logic to remove a bid
 	unsigned key = hash(atoi(bidId.c_str()));
 	nodes.erase(nodes.begin() + key);
 }
@@ -191,7 +191,7 @@ void HashTable::Remove(string bidId) {
 Bid HashTable::Search(string bidId) {
     Bid bid;
 
-    // FIXME (8): Implement logic to search for and return a bid
+    // Implementing logic to search for and return a bid
     unsigned key = hash(atoi(bidId.c_str()));
 
     //try to retrieve node using key
